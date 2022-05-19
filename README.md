@@ -40,7 +40,9 @@ npm install react-image-gallery
 ```
 
 ### Example
+
 Need more example? See [`example/app.js`](https://github.com/xiaolin/react-image-gallery/blob/master/example/app.js)
+
 ```js
 import ImageGallery from 'react-image-gallery';
 
@@ -66,7 +68,7 @@ class MyGallery extends React.Component {
 }
 ```
 
-# Props
+## Props
 
 * `items`: (required) Array of objects, see example above,
   * Available Properties
@@ -158,11 +160,13 @@ class MyGallery extends React.Component {
     * Additional class that will be added to the root node of the component.
 * `renderCustomControls`: Function, custom controls rendering
   * Use this to render custom controls or other elements on the currently displayed image (like the fullscreen button)
+
   ```javascript
     _renderCustomControls() {
       return <a href='' className='image-gallery-custom-action' onClick={this._customAction.bind(this)}/>
     }
   ```
+
 * `renderItem`: Function, custom item rendering
   * NOTE: Highly suggest looking into a render cache such as React.memo if you plan to override renderItem
   * On a specific item `[{thumbnail: '...', renderItem: this.myRenderItem}]`
@@ -177,49 +181,57 @@ class MyGallery extends React.Component {
   * Args:
     * `onClick` callback that will slide to the previous item
     * `disabled` boolean for when the nav is disabled
+
   ```javascript
     renderLeftNav: (onClick, disabled) => (
       <LeftNav onClick={onClick} disabled={disabled} />
     )
   ```
+
 * `renderRightNav`: Function, custom right nav component
   * See [`<RightNav />`](https://github.com/xiaolin/react-image-gallery/blob/master/src/controls/RightNav.js)
   * Use this to render a custom right nav control
   * Args:
     * `onClick` callback that will slide to the next item
     * `disabled` boolean for when the nav is disabled
+
   ```javascript
     renderRightNav: (onClick, disabled) => (
       <RightNav onClick={onClick} disabled={disabled} />
     )
   ```
+
 * `renderPlayPauseButton`: Function, play pause button component
   * See [`<PlayPause />`](https://github.com/xiaolin/react-image-gallery/blob/master/src/controls/PlayPause.js)
   * Use this to render a custom play pause button
   * Args:
     * `onClick` callback that will toggle play/pause
     * `isPlaying` boolean for when gallery is playing
+
   ```javascript
     renderPlayPauseButton: (onClick, isPlaying) => (
       <PlayPause onClick={onClick} isPlaying={isPlaying} />
     )
   ```
+
 * `renderFullscreenButton`: Function, custom fullscreen button component
   * See [`<Fullscreen />`](https://github.com/xiaolin/react-image-gallery/blob/master/src/controls/Fullscreen.js)
   * Use this to render a custom fullscreen button
   * Args:
     * `onClick` callback that will toggle fullscreen
     * `isFullscreen` argument for when fullscreen is active
+
   ```javascript
     renderFullscreenButton: (onClick, isFullscreen) => (
       <Fullscreen onClick={onClick} isFullscreen={isFullscreen} />
     ),
   ```
+
 * `useWindowKeyDown`: Boolean, default `true`
   * If `true`, listens to keydown events on window (window.addEventListener)
   * If `false`, listens to keydown events on image gallery element (imageGalleryElement.addEventListener)
 
-# Functions
+## Functions
 
 The following functions can be accessed using [refs](https://reactjs.org/docs/refs-and-the-dom.html)
 
@@ -230,7 +242,7 @@ The following functions can be accessed using [refs](https://reactjs.org/docs/re
 * `slideToIndex(index)`: slides to a specific index
 * `getCurrentIndex()`: returns the current index
 
-# Contributing
+## Contributing
 
 Each PR should be specific and isolated to the issue you're trying to fix. Please do not stack features/chores/refactors/enhancements in one PR. Describe your feature/implementation in the PR. If you're unsure its useful or if it is a major change, please open an issue first and get feedback.
 
@@ -238,7 +250,7 @@ Each PR should be specific and isolated to the issue you're trying to fix. Pleas
 * Comment your code
 * Write [clean](https://github.com/ryanmcdermott/clean-code-javascript) code
 
-# Build the example locally (requires node >= 12.13)
+## Build the example locally (requires node >= 12.13)
 
 ```
 git clone https://github.com/xiaolin/react-image-gallery.git
@@ -250,6 +262,6 @@ yarn start
 
 Then open [`localhost:8001`](http://localhost:8001) in a browser.
 
-# License
+## License
 
 MIT
