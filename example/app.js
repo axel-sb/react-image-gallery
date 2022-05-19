@@ -125,8 +125,8 @@ class App extends React.Component {
         let images = []
         for (let i = 2; i < 12; i++) {
             images.push({
-                original: `${PREFIX_URL}${i}.jpg`,
-                thumbnail: `${PREFIX_URL}${i}t.jpg`,
+                original: `${PREFIX_URL}${i}.webp`,
+                thumbnail: `${PREFIX_URL}${i}.webp`,
             })
         }
 
@@ -146,9 +146,7 @@ class App extends React.Component {
     }
 
     _toggleShowVideo(url) {
-        this.state.showVideo[url] = !Boolean(
-            this.state.showVideo[url]
-        )
+        this.state.showVideo[url] = !this.state.showVideo[url]
         this.setState({
             showVideo: this.state.showVideo,
         })
@@ -481,4 +479,3 @@ class App extends React.Component {
 }
 
 ReactDOM.render(<App />, document.getElementById('root'))
-
