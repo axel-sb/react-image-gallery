@@ -60,16 +60,16 @@ class App extends React.Component {
 
         this.images = [
             {
-                thumbnail: `${PREFIX_URL}4v.jpg`,
-                original: `${PREFIX_URL}4v.jpg`,
+                thumbnail: `${PREFIX_URL}1.webp`,
+                original: `${PREFIX_URL}1.webp`,
                 embedUrl:
                     'https://www.youtube.com/embed/4pSzhZ76GdM?autoplay=1&showinfo=0',
                 description: 'Render custom slides (such as videos)',
                 renderItem: this._renderVideo.bind(this),
             },
             {
-                original: `${PREFIX_URL}sst-1024-000.png`,
-                thumbnail: `${PREFIX_URL}sst-1024-000.png`,
+                original: `${PREFIX_URL}1.webp`,
+                thumbnail: `${PREFIX_URL}1.webp`,
                 originalClass: 'featured-slide',
                 thumbnailClass: 'featured-thumb',
                 description: 'Custom class for slides & thumbnails',
